@@ -7,3 +7,35 @@
 ##      to the frontend including any      ##
 ##      visualizations/data                ##
 #############################################
+
+import traceback
+from flask import Flask, request
+from backend import eval, model, preprocess, train
+
+app = Flask(__name__)
+
+@app.route('/preprocess')
+def preprocess():
+    # stub
+    return 0
+
+@app.route('/model')
+def modelArc():
+    return 0
+
+@app.route('/eval')
+def evaluate():
+    # stub
+    return 0
+
+@app.route('/train')
+def train():
+    # stub
+    return 0
+
+@app.route("/")
+def homeRoute():
+    return "what are you doing here?"
+
+def main():
+    return "Test flask"
